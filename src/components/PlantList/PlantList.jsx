@@ -7,8 +7,12 @@ function PlantList() {
 
     const reduxState = useSelector(store => store);
 
+    const getPlants = () => {
+        dispatch({type: 'FETCH_PLANTS'})
+    }
+
     useEffect(() => {
-        // dispatch an action to request the plantList from the API
+        getPlants();
     }, []); 
 
     return (
